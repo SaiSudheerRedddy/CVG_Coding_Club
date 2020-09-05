@@ -1,0 +1,19 @@
+Convert the given cartesian Coordinates to polar coordinates
+
+Sample Input
+1+2j
+
+Sampl Output
+ 2.23606797749979 
+ 1.1071487177940904
+ 
+ Code:-
+import math 
+import cmath
+z = complex(input())
+x = z.real
+y = z.imag
+r = math.sqrt((x**2)+(y**2))
+theta = cmath.phase(complex(z.real,z.imag))
+print(r)
+print(theta)
