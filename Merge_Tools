@@ -1,0 +1,26 @@
+Code:
+def merge_the_tools(string, k):
+    # your code goes here
+    
+    split = (len(string)//k)
+    for i in range(0, len(string), split):
+        new_t = ""
+        t = string[i:i+split]
+        for j in range(len(t)):
+            temp = 0
+            if(len(new_t) == 0):
+                new_t = new_t + t[0]
+                #print('0')
+            else:
+                #print(len(new_t))
+                for k in range(len(new_t)):
+                    if(t[j] == new_t[k]):
+                        temp = 1
+                if(temp == 0):
+                    new_t = new_t + t[j]
+        print(new_t)
+                       
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
