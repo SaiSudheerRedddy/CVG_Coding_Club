@@ -1,0 +1,30 @@
+Wrap the given text into the size specified
+
+Sample Input:
+ABCDEFGHIJKLIMNOQRSTUVWXYZ
+4
+
+Sample Output:
+ABCD
+EFGH
+IJKL
+IMNO
+QRST
+UVWX
+YZ
+
+
+Code:-
+import textwrap
+
+def wrap(string, max_width):
+    my_wrap = textwrap.TextWrapper(width = max_width)   ##Wraps the text in given width.
+    wrap_list = textwrap.dedent(text=string)  ##Remove any common leading whitespace from every line in text.
+    wrap = my_wrap.fill(text=wrap_list)   ##Wraps the single paragraph in text, and returns a single string containing the wrapped paragraph.
+    return wrap
+
+
+if __name__ == '__main__':
+    string, max_width = raw_input(), int(raw_input())
+    result = wrap(string, max_width)
+    print result
