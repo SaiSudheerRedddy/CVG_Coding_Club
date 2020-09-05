@@ -1,4 +1,4 @@
-
+Find the frequency of the sub string in the given string
 
 Code:
 def count_substring(string, sub_string):
