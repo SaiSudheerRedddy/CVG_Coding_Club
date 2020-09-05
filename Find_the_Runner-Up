@@ -1,0 +1,12 @@
+Find the second highest(Runner's Up) in the given array of scores!
+
+Code:
+if __name__ == '__main__':
+    n = int(raw_input())
+    arr = map(int, raw_input().split())
+    a=max(arr)
+    temp = min(arr)
+    for i in range(len(arr)):
+        if(arr[i]<a and arr[i]>temp):
+            temp = arr[i]
+    print(temp)
